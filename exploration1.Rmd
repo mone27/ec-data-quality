@@ -1,0 +1,214 @@
+---
+title: "Data exploration"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+library(here)
+theme_set(theme_bw())
+library(lubridate)
+```
+
+```{r}
+df_ec <- here("data/0_raw/Data_HS_LI7000_18_nov_fluxes.rds") %>% 
+  read_rds()
+
+df_ec <- df_ec %>% 
+  rename_with(~str_remove(.x, "mean_"), -time)
+```
+
+```{r}
+table(df_ec$qc_co2_flux)
+```
+
+```{r}
+ggplot(df_ec) +
+  geom_histogram(aes(qc_co2_flux))
+```
+
+```{r}
+ggplot(df_ec) +
+  geom_line(aes(time, co2_flux))
+```
+```{r}
+ggplot(df_ec) +
+  geom_histogram(aes(USTAR))
+```
+```{r}
+ggplot(df_ec) +
+  geom_point(aes(USTAR, qc_co2_flux))
+```
+```{r}
+df_ec %>% 
+  select(USTAR, qc_co2_flux) %>% 
+  drop_na()
+```
+
+```{r}
+missing_data <- function(data) {
+  data %>% 
+  is.na() %>% 
+  colSums() %>% 
+  as.data.frame() %>%
+  transmute(perc_na = ./nrow(data) * 100) %>% 
+  rownames_to_column(var = "var") %>% 
+  mutate(var = fct_reorder(var, perc_na))
+}
+plot_missing_data <- function(miss_data) {
+  ggplot(miss_data, aes(perc_na, data)) +
+    geom_col() +
+    xlim(0, 100) +
+    labs(x="Percentage of missing data", y="Var")
+}
+```
+
+```{r}
+df_ec %>% 
+  missing_data %>% 
+  arrange(desc(perc_na)) %>% 
+  knitr::kable()
+```
+
+```{r}
+# Note this code is kind of slow
+ec_data_pres <- df_ec %>% 
+  rowwise() %>% 
+  mutate(data_pres = !all(is.na(c_across(-time)))) %>% 
+  select(time, data_pres)
+```
+
+```{r}
+ggplot(ec_data_pres) +
+  geom_point(aes(time, data_pres))
+```
+
+```{r}
+ec_data_pres %>% 
+  ggplot() +
+    geom_point(aes(time, data_pres, col=data_pres), size=1.5, alpha=.1) + 
+    scale_colour_manual(values = c("red", "darkgreen")) +
+    labs(caption = "Data present true when at least one variable is not NA")
+```
+
+```{r}
+ec_data_pres_m <- ec_data_pres %>% 
+  group_by(time = round_date(time, "month")) %>% 
+  summarize(data_pres = mean(data_pres))
+```
+
+```{r}
+ec_data_pres_m %>% 
+  ggplot() +
+    geom_line(aes(time, data_pres))
+```
+
+```{r}
+ec_data_pres %>% 
+  group_by(time = round_date(time, "week")) %>% 
+  summarize(data_pres = mean(data_pres)) %>% 
+  ggplot() +
+    geom_point(aes(time, data_pres))
+```
+
+```{r}
+ec_data_pres %>% 
+  group_by(time = round_date(time, "1 days")) %>% 
+  summarize(data_pres = mean(data_pres)) %>% 
+  ggplot() +
+  geom_histogram(aes(data_pres), bins=30)
+```
+
+# CO2 explore
+
+```{r}
+names(df_ec)[grep("co2", names(df_ec), ignore.case = T)]
+```
+```{r}
+df_ec$CO2[df_ec$CO2 < 0] <-  NA
+df_ec$CO2[df_ec$CO2 > 1000] <-  NA
+```
+
+
+```{r}
+df_ec %>% 
+  select(CO2) %>% 
+  drop_na() %>% 
+  ggplot() +
+  geom_histogram(aes(CO2))
+```
+
+```{r}
+df_ec %>% 
+  select(co2_mean) %>% 
+  drop_na() %>% 
+  ggplot() +
+  geom_histogram(aes(co2_mean))
+```
+
+what's the difference between CO2 and co2_mean ??
+
+```{r}
+df_ec %>% 
+  select(co2_spikes) %>% 
+  drop_na() %>% 
+  ggplot() +
+  geom_histogram(aes(co2_spikes))
+```
+```{r}
+df_ec %>% 
+  select(qc_co2_flux) %>% 
+  drop_na() %>% 
+  ggplot() +
+  geom_histogram(aes(qc_co2_flux))
+```
+# Wind 
+ 
+```{r}
+df_ec %>% 
+  ggplot() +
+  geom_histogram(aes(wind_speed), na.rm=T, bins = 50)
+```
+ 
+```{r}
+df_ec %>% 
+  ggplot() +
+  geom_histogram(aes(WS), na.rm=T, bins = 50)
+```
+ 
+# Meteo data
+
+```{r}
+meteo <- read_rds(here("data/1_prepared/meteo_hainich.rds"))
+```
+
+```{r}
+meteo %>% 
+  missing_data %>% 
+  arrange(desc(perc_na)) %>% 
+  knitr::kable()
+```
+
+```{r}
+# Note this code is kind of slow
+meteo_data_pres <- meteo %>% 
+  rowwise() %>% 
+  mutate(data_pres = !all(is.na(c_across(-time)))) %>% 
+  select(time, data_pres)
+```
+
+```{r}
+meteo_data_pres %>% 
+  ggplot() +
+    geom_point(aes(time, data_pres, col=data_pres), size=1.5, alpha=.1) + 
+    scale_colour_manual(values = c("red", "darkgreen")) +
+    labs(caption = "Data present true when at least one variable is not NA")
+```
+
+```{r}
+sd(meteo_data_pres$data_pres)
+```
+
+```{r}
+sd(ec_data_pres$data_pres)
+```
+

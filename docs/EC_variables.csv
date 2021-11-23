@@ -1,0 +1,239 @@
+name,is_used,Full name,type,description,comment,unit,source
+time,TRUE,,input,,,,EC
+BOWEN_RATIO,TRUE,,input,,,,EC
+CO2,TRUE,,,,,,EC
+CO2_ABS,TRUE,,,,,,EC
+CO2_SPIKES,FALSE,,,,,,EC
+CO2_TLAG,FALSE,,,,,,EC
+CO2_VADV,FALSE,,,,,,EC
+CO2_VAR,FALSE,,,,,,EC
+C_P,FALSE,,,,,,EC
+ET,FALSE,,,,,,EC
+FC,FALSE,,,,,,EC
+FCO2,FALSE,,,,,,EC
+FCO2_QC,FALSE,,,,,,EC
+FCO2_RANDOM_ERROR,FALSE,,,,,,EC
+FCO2_SCF,FALSE,,,,,,EC
+FCO2_UN,FALSE,,,,,,EC
+FETCH_10,TRUE,,,,,,EC
+FETCH_30,TRUE,,,,,,EC
+FETCH_50,TRUE,,,,,,EC
+FETCH_70,TRUE,,,,,,EC
+FETCH_90,TRUE,,,,,,EC
+FETCH_MAX,TRUE,,,,,,EC
+FH2O,FALSE,,,,,,EC
+FH2O_QC,FALSE,,,,,,EC
+FH2O_RANDOM_ERROR,FALSE,,,,,,EC
+FH2O_SCF,FALSE,,,,,,EC
+FH2O_UN,FALSE,,,,,,EC
+H,FALSE,,,,,,EC
+H20_SPIKES,FALSE,,,,,,EC
+H2O,FALSE,,,,,,EC
+H2O_ABS,FALSE,,,,,,EC
+H2O_TLAG,FALSE,,,,,,EC
+H2O_VADV,FALSE,,,,,,EC
+H2O_VAR,FALSE,,,,,,EC
+H_QC,FALSE,,,,,,EC
+H_RANDOM_ERROR,FALSE,,,,,,EC
+H_SCF,FALSE,,,,,,EC
+H_UN,FALSE,,,,,,EC
+H_scf,FALSE,,,,,,EC
+H_strg,FALSE,,,,,,EC
+L,FALSE,,,,,,EC
+LE,FALSE,,,,,,EC
+LE_QC,FALSE,,,,,,EC
+LE_RANDOM_ERROR,FALSE,,,,,,EC
+LE_SCF,FALSE,,,,,,EC
+LE_UN,FALSE,,,,,,EC
+LE_scf,FALSE,,,,,,EC
+LE_strg,FALSE,,,,,,EC
+MO_LENGTH,FALSE,,,,,,EC
+M_VOL,FALSE,,,,,,EC
+PA,FALSE,,,,,,EC
+PITCH,FALSE,,,,,,EC
+P_BENCH,FALSE,,,,,,EC
+R2_SR_linear,FALSE,,,,,,EC
+RH,TRUE,,,,,,EC
+RHO_AIR,FALSE,,,,,,EC
+RHO_WV,FALSE,,,,,,EC
+RMSE_SR_exp,FALSE,,,,,,EC
+SCO2,FALSE,,,,,,EC
+SH,FALSE,,,,,,EC
+SH2O,FALSE,,,,,,EC
+SLE,FALSE,,,,,,EC
+SPECIFIC_HUMIDITY,FALSE,,,,,,EC
+SR,FALSE,,,,,,EC
+SR_LI8100,FALSE,,,,,,EC
+SR_exp,FALSE,,,,,,EC
+SR_linear,FALSE,,,,,,EC
+SWC,FALSE,,,,,,EC
+T,TRUE,,,,,,EC
+TA,FALSE,,,,,,EC
+TAU,FALSE,,,,,,EC
+TAU_QC,FALSE,,,,,,EC
+TAU_RANDOM_ERROR,FALSE,,,,,,EC
+TAU_SCF,FALSE,,,,,,EC
+TAU_UN,FALSE,,,,,,EC
+TKE,FALSE,,,,,,EC
+TS,FALSE,,,,,,EC
+TSTAR,FALSE,,,,,,EC
+T_BENCH,FALSE,,,,,,EC
+T_BOARD,FALSE,,,,,,EC
+T_DP,FALSE,,,,,,EC
+T_SONIC,FALSE,,,,,,EC
+T_SONIC_SPIKES,FALSE,,,,,,EC
+T_SONIC_VAR,FALSE,,,,,,EC
+Tau,FALSE,,,,,,EC
+Tau_scf,FALSE,,,,,,EC
+Tdew,FALSE,,,,,,EC
+USTAR,TRUE,,,,,,EC
+U_ROT,TRUE,,,,,,EC
+U_SPIKES,TRUE,,,,,,EC
+U_UNROT,TRUE,,,,,,EC
+U_VAR,TRUE,,,,,,EC
+VPD,FALSE,,,,,,EC
+VP_act,FALSE,,,,,,EC
+VP_max,FALSE,,,,,,EC
+V_IN,FALSE,,,,,,EC
+V_ROT,TRUE,,,,,,EC
+V_SPIKES,TRUE,,,,,,EC
+V_UNROT,TRUE,,,,,,EC
+V_VAR,TRUE,,,,,,EC
+WD,TRUE,,,,,,EC
+WS,TRUE,,,,,,EC
+WS_MAX,TRUE,,,,,,EC
+W_CO2_COV,FALSE,,,,,,EC
+W_H2O_COV,FALSE,,,,,,EC
+W_ROT,FALSE,,,,,,EC
+W_SPIKES,TRUE,,,,,,EC
+W_T_SONIC_COV,FALSE,,,,,,EC
+W_UNROT,TRUE,,,,,,EC
+W_VAR,FALSE,,,,,,EC
+X.z.d..L,FALSE,,,,,,EC
+YAW,FALSE,,,,,,EC
+ZL,FALSE,,,,,,EC
+air_density,FALSE,,,,,,EC
+air_heat_capacity,FALSE,,,,,,EC
+air_molar_volume,FALSE,,,,,,EC
+air_pressure,FALSE,,,,,,EC
+air_temperature,FALSE,,,,,,EC
+bowen_ratio,FALSE,,,,,,EC
+co2_flux,TRUE,,,,,,EC
+co2_mean,FALSE,,,,,,EC
+co2_mixing_ratio,FALSE,,,,,,EC
+co2_molar_density,FALSE,,,,,,EC
+co2_mole_fraction,FALSE,,,,,,EC
+co2_scf,FALSE,,,,,,EC
+co2_spikes,TRUE,,,,,,EC
+co2_strg,FALSE,,,,,,EC
+co2_time_lag,FALSE,,,,,,EC
+co2_v.adv,FALSE,,,,,,EC
+co2_var,TRUE,,,,,,EC
+daytime,FALSE,,,,,,EC
+e,FALSE,,,,,,EC
+es,FALSE,,,,,,EC
+h2o_flux,FALSE,,,,,,EC
+h2o_mean,FALSE,,,,,,EC
+h2o_mixing_ratio,FALSE,,,,,,EC
+h2o_molar_density,FALSE,,,,,,EC
+h2o_mole_fraction,FALSE,,,,,,EC
+h2o_scf,FALSE,,,,,,EC
+h2o_spikes,FALSE,,,,,,EC
+h2o_strg,FALSE,,,,,,EC
+h2o_time_lag,FALSE,,,,,,EC
+h2o_v.adv,FALSE,,,,,,EC
+h2o_var,FALSE,,,,,,EC
+max_wind_speed,TRUE,,,,,,EC
+model,FALSE,,,,,,EC
+pitch,FALSE,,,,,,EC
+qc_H,FALSE,,,,,,EC
+qc_LE,FALSE,,,,,,EC
+qc_Tau,FALSE,,,,,,EC
+qc_co2_flux,TRUE,,,,,,EC
+qc_h2o_flux,FALSE,,,,,,EC
+roll,FALSE,,,,,,EC
+sonic_temperature,FALSE,,,,,,EC
+specific_humidity,FALSE,,,,,,EC
+ts_spikes,FALSE,,,,,,EC
+ts_var,FALSE,,,,,,EC
+u,TRUE,,,,,,EC
+u_rot,FALSE,,,,,,EC
+u_spikes,TRUE,,,,,,EC
+u_unrot,TRUE,,,,,,EC
+u_var,TRUE,,,,,,EC
+un_H,FALSE,,,,,,EC
+un_LE,FALSE,,,,,,EC
+un_Tau,FALSE,,,,,,EC
+un_co2_flux,FALSE,,,,,,EC
+un_h2o_flux,FALSE,,,,,,EC
+v_rot,FALSE,,,,,,EC
+v_spikes,TRUE,,,,,,EC
+v_unrot,TRUE,,,,,,EC
+v_var,TRUE,,,,,,EC
+w.co2_cov,FALSE,,,,,,EC
+w.h2o_cov,FALSE,,,,,,EC
+w.ts_cov,FALSE,,,,,,EC
+w_rot,FALSE,,,,,,EC
+w_spikes,TRUE,,,,,,EC
+w_unrot,TRUE,,,,,,EC
+w_var,TRUE,,,,,,EC
+water_vapor_density,FALSE,,,,,,EC
+wind_dir,TRUE,,,,,,EC
+wind_speed,TRUE,,,,,,EC
+x_10,TRUE,,,,,,EC
+x_30,TRUE,,,,,,EC
+x_50,TRUE,,,,,,EC
+x_70,TRUE,,,,,,EC
+x_90,TRUE,,,,,,EC
+x_offset,TRUE,,,,,,EC
+x_peak,TRUE,,,,,,EC
+y,FALSE,,,,,,EC
+time,TRUE,,,,,,meteo
+ALB,TRUE,Albedo,input,,,Perc,meteo
+CO2,FALSE,,,,?,,meteo
+CO2_raw,FALSE,,,,?,,meteo
+G,FALSE,ground heat flux,input,,,,meteo
+H2O,FALSE,Water vapour concentration,input,,,ppt,meteo
+H2O_raw,FALSE,,,,?,,meteo
+Heating,FALSE,,,,?,,meteo
+LW_IN,TRUE,Incoming longwave,input,,,W_m-2,meteo
+LW_OUT,TRUE,Outgoing longwave,input,,,W_m-2,meteo
+LW_TEMP_IN,FALSE,,,,?,,meteo
+NETRAD,TRUE,Net radiation,input,,,W_m-2,meteo
+P,TRUE,precipipation,input,rain from multiple instruments,,mm,meteo
+PA,TRUE,Air pressure,input,,,hPa,meteo
+PAR_IN,FALSE,,,,?,,meteo
+PAR_OUT,FALSE,,,,?,,meteo
+PPFD_IN,FALSE,,,,?,,meteo
+PPFD_OUT,FALSE,,,,?,,meteo
+P_BC,FALSE,,,,?,,meteo
+RAD_IN,TRUE,Total incoming radiation,input,,,W_m-2,meteo
+RAD_OUT,TRUE,Total reflected radiation,input,,does this include also emitted longwave?,W_m-2,meteo
+RH,TRUE,Relative humidity,input,,,Perc,meteo
+RHO,TRUE,Air density,input,,,g_m-3,meteo
+SPECIFIC_HUMIDITY,FALSE,,,,redundant?,g_kg-1,meteo
+SUNSHINE_DURATION,TRUE,sunshine duration,input,,,s_10min-1,meteo
+SUN_DUR,FALSE,,,,?,,meteo
+SWC,FALSE,Soil water content,,,Not interesting?,,meteo
+SW_BC_IN,TRUE,Shortwave incoming radiation below canopy,input,,,W_m-2,meteo
+SW_DIF,FALSE,,,,,W_m-2,meteo
+SW_DIF_IN,TRUE,Shortwave diffuse incoming radiation,input,,,W_m-2,meteo
+SW_IN,TRUE,Shortwave incoming radiation,input,,,W_m-2,meteo
+SW_IN.1,FALSE,,,,,,meteo
+SW_OUT,TRUE,Shortwave reflected radiation,,,,,meteo
+T,FALSE,,,,,,meteo
+TA,TRUE,Air temperature,input,,Already included in EC dataset?,degC,meteo
+TA_pot,FALSE,Potential temperature,,,Not interesting?,,meteo
+TS,FALSE,Soil temperature,,,Not interesting?,,meteo
+T_DP,FALSE,,,,?,,meteo
+T_PYRG,FALSE,,,,?,,meteo
+T_PYRGEOMETER,FALSE,Tempeature pyrgeometer,input,,Not interesting?,,meteo
+T_stem,FALSE,Temperature Stem,input,,,,meteo
+VPD,TRUE,Vapour Pressure deficit,input,,,hPa,meteo
+VPD_act,FALSE,,,,?,,meteo
+VPD_def,FALSE,,,,?,,meteo
+VPD_max,TRUE,Maximum Vapour pressure,input,,,hPa,meteo
+VP_act,TRUE,Actual vapour pressure,input,,,hPa,meteo
+VP_max,TRUE,Maximum Vapour pressure,input,,,hPa,meteo
+WD,FALSE,,,,Reduntant,,meteo
+WS,FALSE,,,,Reduntant,,meteo

@@ -1,0 +1,111 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Description
+
+This notebooks takes the data from the DB, select/renames columns and aggregates date
+
+# Setup
+
+```{r}
+library(tidyverse)
+library(here)
+```
+
+```{r}
+sel_vars <- read_csv(here("docs/EC_variables.csv"))
+```
+
+
+# EC
+
+```{r}
+df_ec <- here("data/Data_HS_LI7000_18_nov_fluxes.rds") %>% 
+  read_rds()
+```
+
+```{r}
+names(df_ec)
+```
+remove the "mean" from in front of the column names as it is probably added just by the InfluxDB
+
+```{r}
+df_ec <- df_ec %>% 
+  rename_with(~str_remove(.x, "mean_"), -time)
+```
+
+```{r}
+paste(names(df_ec), collapse = " ")
+```
+
+select only the interesting variables
+
+```{r}
+ec_vars <- sel_vars %>% 
+  filter(source == "EC", is_used) %>% 
+  pull(name)
+df_ec_sel <- df_ec %>% 
+  select(all_of(ec_vars))
+```
+
+```{r}
+write_rds(df_ec_sel, here("data/1_prepared/EC_hainich.rds"))
+```
+
+
+# Meteo
+```{r}
+df_meteo_raw <- read_rds(here("data/0_raw/meteo_data_19_nov.rds")) %>% 
+  rename_with(~str_remove(.x, "mean_"), -time)
+```
+
+```{r}
+names(df_meteo_raw)
+```
+```{r}
+paste(names(df_meteo_raw), collapse = " ")
+```
+
+Need to resample the meteo data from 10 mins to half an hour and correctly aggregate variables
+
+```{r}
+meteo_vars <- sel_vars %>% 
+  filter(source == "meteo", is_used) %>% 
+  pull(name)
+df_meteo <- df_meteo_raw %>% 
+  select(all_of(meteo_vars))
+
+meteo_vars
+```
+
+```{r}
+df_meteo
+```
+
+```{r}
+(df_meteo_30 <- df_meteo %>% 
+  group_by(time = round_date(time, "30 min")) %>% 
+  summarize(across(-P, mean), P = sum(P)))
+```
+
+```{r}
+df_meteo %>% 
+  filter(time > as_datetime("2016-06-01"), time < as_datetime("2016-06-02") ) %>% 
+  ggplot() +
+  geom_line(aes(time, SW_IN)) +
+  geom_line(aes(time, SW_IN), data = filter(df_meteo_30, time > as_datetime("2016-06-01"), time < as_datetime("2016-06-02")), col="red")
+```
+```{r}
+write_rds(df_meteo_30, here("data/1_prepared/meteo_hainich.rds"))
+```
+
+```{r}
+(ec_all <- inner_join(df_ec_sel, df_meteo_30, by="time"))
+```
+
+```{r}
+write_rds(ec_all, here("data/1_prepared/ec_all_hainich.rds"))
+```
+

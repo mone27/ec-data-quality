@@ -1,0 +1,83 @@
+Variable,Variable_name,Unit,Instrument,Instrument_ID,Height(m),Depth(m),Direction(deg),Repetition,Station,Tree,Compartment
+Air pressure,PA,hPa,Vaisala-pressure_transmitter,,44,,,"""""",Tower,,air
+Air temperature,TA,degC,Friedrichs_Thermometer,,2,,,1,Tower,,air
+Air temperature,TA,degC,Friedrichs_Thermometer,,2,,,2,Tower,,air
+Air temperature,TA,degC,Friedrichs_Thermometer,,10,,,"""None""",Tower,,air
+Air temperature,TA,degC,Friedrichs_Thermometer,,20,,,"""None""",Tower,,air
+Air temperature,TA,degC,Friedrichs_Thermometer,,32,,,"""None""",Tower,,air
+Air temperature,TA,degC,Friedrichs_Thermometer,,40,,,"""None""",Tower,,air
+Air temperature,TA,degC,Vaisala-HMP45D,,44,,,"""""",Tower,,air
+Potential temperature,TA_pot,K,Vaisala-HMP45D,,44,,,,Tower,,air
+Dew point temperature,T_DP,degC,Vaisala-HMP45D,,44,,,,Tower,,air
+Relative humidity,RH,Perc,Vaisala-HMP45D,,44,,,,Tower,,air
+Maximum vapour pressure,VP_max,hPa,Vaisala-HMP45D,,44,,,,Tower,,air
+Actual vapour pressure,VP_act,hPa,Vaisala-HMP45D,,44,,,,Tower,,air
+Vapour pressure deficit,VPD,hPa,Vaisala-HMP45D,,44,,,,Tower,,air
+Specific humidity ,SPECIFIC_HUMIDITY,g_kg-1,Vaisala-HMP45D,,44,,,,Tower,,air
+Water vapour concentration,H2O,ppt,Vaisala-HMP45D,,44,,,,Tower,,air
+Air density,RHO,g_m-3,Vaisala-HMP45D,,44,,,,Tower,,air
+Wind speed,WS,m_s-1,Vector_Instruments-cup_anemometer,,44,,,,Tower,,air
+Wind speed,WS,m_s-1,Thies-2D_Ultrasonic,,44,,,,Tower,,air
+Wind direction,WD,deg ,Vector_Instruments-wind_wane,,44,,,,Tower,,air
+Wind direction,WD,deg ,Thies-2D_Ultrasonic,,44,,,,Tower,,air
+Precipitation,P ,mm,Young-rain_gauge,,1,,,"""None""",Tower,,air
+Precipitation,P ,mm,Young-rain_gauge,,1,,,"""None""",solar,,air
+Precipitation,P ,mm,Thies-rain_gauge,,1,,,"""None""",solar,,air
+Pyrgeometer temperature,T_PYRGEOMETER,degC,Finck-Pyrradiometer,,44,,,,Tower,,air
+Pyrgeometer temperature,T_PYRGEOMETER,degC,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Total incoming radiation,RAD_IN,W_m-2,Finck-Pyrradiometer,,44,,,,Tower,,air
+Total incoming radiation,RAD_IN,W_m-2,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Total reflected radiation,RAD_OUT,W_m-2,Finck-Pyrradiometer,,44,,,,Tower,,air
+Total reflected radiation,RAD_OUT,W_m-2,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Shortwave incoming radiation,SW_IN,W_m-2,Finck-Pyrradiometer,,44,,,,Tower,,air
+Shortwave incoming radiation,SW_IN,W_m-2,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Shortwave incoming radiation,SW_IN,W_m-2,Delta_T-SPN1,,44,,,,Tower,,air
+Shortwave diffuse incoming radiation,SW_DIF_IN,W_m-2,Delta_T-SPN1,,44,,,,Tower,,air
+Shortwave incoming radiation below canopy,SW_BC_IN,W_m-2,Kipp_and_Zonen-CM11,,2,,,,Tower,,air
+Sunshine duration,SUNSHINE_DURATION,s_10min-1,Delta_T-SPN1,,44,,,,Tower,,air
+Shortwave reflected radiation,SW_OUT,W_m-2,Finck-Pyrradiometer,,44,,,,Tower,,air
+Shortwave reflected radiation,SW_OUT,W_m-2,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Albedo,ALB,Perc,Finck-Pyrradiometer,,44,,,,Tower,,air
+Albedo,ALB,Perc,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Longwave incoming radiation,LW_IN,W_m-2,Finck-Pyrradiometer,,44,,,,Tower,,air
+Longwave incoming radiation,LW_IN,W_m-2,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Longwave reflected radiation,LW_OUT,W_m-2,Finck-Pyrradiometer,,44,,,,Tower,,air
+Longwave reflected radiation,LW_OUT,W_m-2,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Net radiation,NETRAD,W_m-2,Finck-Pyrradiometer,,44,,,,Tower,,air
+Net radiation,NETRAD,W_m-2,Kipp&Zonen-CNR1,,44,,,,Tower,,air
+Incoming photosynthetic photon flux density ,PPFD_IN,umol_m-2_s-1,Licor-LI-190SA,,44,,,,Tower,,air
+Incoming photosynthetic photon flux density ,PPFD_IN,umol_m-2_s-1,Kipp&Zonen-PAR_Lite,,44,,,None,Tower,,air
+Reflected photosynthetic photon flux density ,PPFD_OUT,umol_m-2_s-1,Kipp&Zonen-PAR_Lite,,44,,,None,Tower,,air
+Ground heat flux,G,W_m-2,Rimco-HP3/CN3,,,0.05,,1,Tower,,soil
+Ground heat flux,G,W_m-2,Rimco-HP3/CN3,,,0.05,,2,Tower,,soil
+Ground heat flux,G,W_m-2,Rimco-HP3/CN3,,,0.05,,3,Tower,,soil
+Ground heat flux,G,W_m-2,Rimco-HP3/CN3,,,0.05,,4,Tower,,soil
+Ground heat flux,G,W_m-2,Rimco-HP3/CN3,,,0.05,,5,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.02,,1,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.05,,1,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.15,,1,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.3,,1,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.5,,1,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.02,,2,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.05,,2,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.15,,2,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.3,,2,Tower,,soil
+Soil temperature,TS,degC,PT100,,,0.5,,2,Tower,,soil
+Soil water content,SWC,Perc,Delta_T-SM_ML-2x,,,0.08,,1,Tower,,soil
+Soil water content,SWC,Perc,Delta_T-SM_ML-2x,,,0.16,,1,Tower,,soil
+Soil water content,SWC,Perc,Delta_T-SM_ML-2x,,,0.32,,1,Tower,,soil
+Soil water content,SWC,Perc,Delta_T-SM_ML-2x,,,0.08,,2,Tower,,soil
+Soil water content,SWC,Perc,Delta_T-SM_ML-2x,,,0.08,,3,Tower,,soil
+Soil water content,SWC,Perc,Delta_T-SM_ML-2x,,,0.08,,4,Tower,,soil
+Stem temperature,T_STEM,degC,PT100,,1.5,0.03,270,,Tower,beech,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.03,180,,Tower,beech,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.03,90,,Tower,beech,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.03,0,,Tower,beech,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.155,0,,Tower,beech,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.39,0,,Tower,beech,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.03,0,,Tower,ash,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.15,0,,Tower,ash,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.285,0,,Tower,ash,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.03,0,,Tower,maple,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.15,0,,Tower,maple,
+Stem temperature,T_STEM,degC,PT100,,1.5,0.27,0,,Tower,maple,
